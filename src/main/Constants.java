@@ -1,5 +1,7 @@
 package main;
 
+import com.ctre.CANTalon.TalonControlMode;
+
 public interface Constants {
 	/****************
 	 ****variables***
