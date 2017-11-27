@@ -2,9 +2,12 @@ package subsystems;
 
 import Util.DriveHelper;
 import edu.wpi.first.wpilibj.RobotDrive;
+import edu.wpi.first.wpilibj.command.Subsystem;
+import main.Constants;
+import main.HardwareAdapter;
 import main.Robot;
 
-public class DriveTrain {
+public class DriveTrain extends Subsystem implements Constants, HardwareAdapter {
 	private static RobotDrive driveTrain = new RobotDrive(leftDriveMaster, rightDriveMaster);
 	private DriveHelper helper = new DriveHelper(7.5);
 
