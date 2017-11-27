@@ -1,6 +1,7 @@
 package main;
 
 import edu.wpi.first.wpilibj.IterativeRobot;
+import subsystems.DriveTrain;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -10,12 +11,16 @@ import edu.wpi.first.wpilibj.IterativeRobot;
  * directory.
  */
 public class Robot extends IterativeRobot {
+	public static OI oi;
+	public static DriveTrain dt;
 	/**
 	 * This function is run when the robot is first started up and should be
 	 * used for any initialization code.
 	 */
 	@Override
 	public void robotInit() {
+		dt = new DriveTrain();
+		oi = new OI();
 	}
 
 	/**
