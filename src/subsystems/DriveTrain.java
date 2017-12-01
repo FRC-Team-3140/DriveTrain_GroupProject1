@@ -1,11 +1,14 @@
 package subsystems;
 
+import com.ctre.CANTalon.TalonControlMode;
+
 import Util.DriveHelper;
 import edu.wpi.first.wpilibj.RobotDrive;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import main.Constants;
 import main.HardwareAdapter;
 import main.Robot;
+import main.commands.DriveCommand;
 
 public class DriveTrain extends Subsystem implements Constants, HardwareAdapter {
 	private static RobotDrive driveTrain = new RobotDrive(leftDriveMaster, rightDriveMaster);
@@ -74,7 +77,7 @@ public class DriveTrain extends Subsystem implements Constants, HardwareAdapter 
 
 	@Override
 	protected void initDefaultCommand() {
-		setDefaultCommand(new Drive());
+		setDefaultCommand(new DriveCommand());
 
 	}
 
